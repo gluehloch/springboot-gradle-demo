@@ -8,6 +8,12 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
+		org.assertj.core.api.Assertions.assertThat(true).isTrue();
+	}
+
+	@Test
+	void failed() {
+		// org.assertj.core.api.Assertions.assertThat(true).isFalse();
 	}
 
 }
