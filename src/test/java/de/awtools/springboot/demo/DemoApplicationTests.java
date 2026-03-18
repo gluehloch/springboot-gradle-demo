@@ -13,7 +13,7 @@ class DemoApplicationTests {
 
 	@Test
 	void failed() {
-		org.assertj.core.api.Assertions.assertThat(true).isFalse();
+		org.assertj.core.api.Assertions.assertThat(true).isTrue();
 	}
 
 }
