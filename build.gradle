@@ -28,6 +28,17 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+// Ensure subprojects import the Spring Boot BOM so version-less dependencies
+// like 'org.junit.jupiter:junit-jupiter' resolve to the BOM-provided version.
+subprojects {
+	apply plugin: 'io.spring.dependency-management'
+	dependencyManagement {
+		imports {
+			mavenBom 'org.springframework.boot:spring-boot-dependencies:4.0.3'
+		}
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
